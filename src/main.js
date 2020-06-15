@@ -5,6 +5,12 @@ import './registerServiceWorker'
 
 Vue.config.productionTip = false
 
+// Import global styles
+require("@/assets/css/main.min.css");
+
+// Import Icon font
+require("@/assets/css/icon-font.css");
+
 new Vue({
   router,
   render: h => h(App)
