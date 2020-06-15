@@ -9,12 +9,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
+<script>
 import ParagraphTitled from "@/components/ParagraphTitled.vue";
 
-export default Vue.extend({
+export default {
   name: "FeatureBox",
 
   components: {
@@ -24,5 +22,5 @@ export default Vue.extend({
   props: {
     feature: Object
   }
-});
+};
 </script>
