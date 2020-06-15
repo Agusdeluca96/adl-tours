@@ -38,12 +38,21 @@
         </div>
       </div>
     </section>
+
+    <section class="section-features">
+      <div class="row">
+        <div class="col-1-of-4" v-for="feature in features" :key="`feature-${feature.id}`">
+          <FeatureBox :feature="feature" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import { ABOUT_IMAGES } from "@/_factories";
+import { FEATURES, ABOUT_IMAGES } from "@/_factories";
 
+import FeatureBox from "@/components/FeatureBox.vue";
 import Composition from "@/components/Composition.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import ParagraphTitled from "@/components/ParagraphTitled.vue";
@@ -52,6 +61,7 @@ export default {
   name: "home",
 
   components: {
+    FeatureBox,
     Composition,
     SectionHeading,
     ParagraphTitled
@@ -59,6 +69,7 @@ export default {
 
   data: () => {
     return {
+      features: FEATURES,
       aboutImages: ABOUT_IMAGES
     };
   }
