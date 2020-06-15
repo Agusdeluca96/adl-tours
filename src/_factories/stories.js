@@ -1,4 +1,4 @@
-export const TESTIMONIALS = [
+export const STORIES = [
   {
     id: 1,
     personName: "Mary Smith",

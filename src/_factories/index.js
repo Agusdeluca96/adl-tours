@@ -1,4 +1,4 @@
 export * from './tours';
 export * from './features';
-export * from './testimonials';
+export * from './stories';
 export * from './aboutImages';

@@ -58,34 +58,55 @@
         <a href="#" class="btn btn--rounded btn--green">Discover all tours</a>
       </div>
     </section>
+
+    <section class="section-stories">
+      <BackgroundVideo
+        mp4Src="https://agustindeluca.com.ar/projects/adl-tours/videos/beach-background.mp4"
+        webmSrc="https://agustindeluca.com.ar/projects/adl-tours/videos/beach-background.webm"
+      />
+
+      <SectionHeading heading="We make people genuinely happy" />
+
+      <div class="row" v-for="story in stories" :key="`story-${story.id}`">
+        <Story :story="story" />
+      </div>
+      <div class="u-text-center u-mt-huge">
+        <a href="#" class="btn-text">Read all stories &rarr;</a>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import { FEATURES, TOURS, ABOUT_IMAGES } from "@/_factories";
+import { ABOUT_IMAGES, FEATURES, TOURS, STORIES } from "@/_factories";
 
 import Card from "@/components/Card.vue";
+import Story from "@/components/Story.vue";
 import FeatureBox from "@/components/FeatureBox.vue";
 import Composition from "@/components/Composition.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import ParagraphTitled from "@/components/ParagraphTitled.vue";
+import BackgroundVideo from "@/components/BackgroundVideo.vue";
 
 export default {
   name: "home",
 
   components: {
     Card,
+    Story,
     FeatureBox,
     Composition,
     SectionHeading,
-    ParagraphTitled
+    ParagraphTitled,
+    BackgroundVideo
   },
 
   data: () => {
     return {
       aboutImages: ABOUT_IMAGES,
       features: FEATURES,
-      tours: TOURS
+      tours: TOURS,
+      stories: STORIES
     };
   }
 };
