@@ -46,12 +46,25 @@
         </div>
       </div>
     </section>
+
+    <section class="section-tours">
+      <SectionHeading heading="Most popular tours" />
+      <div class="row">
+        <div class="col-1-of-3" v-for="tour in tours" :key="`tour-${tour.id}`">
+          <Card :tour="tour" />
+        </div>
+      </div>
+      <div class="u-text-center u-mt-huge">
+        <a href="#" class="btn btn--rounded btn--green">Discover all tours</a>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import { FEATURES, ABOUT_IMAGES } from "@/_factories";
+import { FEATURES, TOURS, ABOUT_IMAGES } from "@/_factories";
 
+import Card from "@/components/Card.vue";
 import FeatureBox from "@/components/FeatureBox.vue";
 import Composition from "@/components/Composition.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
@@ -61,6 +74,7 @@ export default {
   name: "home",
 
   components: {
+    Card,
     FeatureBox,
     Composition,
     SectionHeading,
@@ -69,8 +83,9 @@ export default {
 
   data: () => {
     return {
+      aboutImages: ABOUT_IMAGES,
       features: FEATURES,
-      aboutImages: ABOUT_IMAGES
+      tours: TOURS
     };
   }
 };
