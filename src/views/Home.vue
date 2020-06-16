@@ -61,8 +61,8 @@
 
     <section class="section-stories">
       <BackgroundVideo
-        mp4Src="https://agustindeluca.com.ar/projects/adl-tours/assets/videos/beach-background.mp4"
-        webmSrc="https://agustindeluca.com.ar/projects/adl-tours/assets/videos/beach-background.webm"
+        mp4Src="https://adl-tours.agustindeluca.com.ar/assets/videos/beach-background.mp4"
+        webmSrc="https://adl-tours.agustindeluca.com.ar/assets/videos/beach-background.webm"
       />
 
       <SectionHeading heading="We make people genuinely happy" customClasses="u-mb-big" />
