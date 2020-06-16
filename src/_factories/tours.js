@@ -21,7 +21,7 @@ export const TOURS = [
   },
   {
     id: 3,
-    name: "The sea explorer",
+    name: "The snow adventurer",
     duration: "5 day tour",
     capacity: "Up to 15 people",
     guides: "3 tour guides",
