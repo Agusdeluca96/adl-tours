@@ -1,5 +1,5 @@
 <template>
-  <div class="section-heading u-text-center u-mb-big">
+  <div :class="`section-heading u-text-center ${customClasses}`">
     <h2 class="heading-secondary">{{ heading }}</h2>
   </div>
 </template>
@@ -9,7 +9,8 @@ export default {
   name: "SectionHeading",
 
   props: {
-    heading: String
+    heading: String,
+    customClasses: String
   }
 };
 </script>

@@ -16,7 +16,7 @@
 
     <section class="section-about">
       <div class="row">
-        <SectionHeading heading="Exciting tours for adventurous people" />
+        <SectionHeading heading="Exciting tours for adventurous people" customClasses="u-mb-big" />
         <div class="col-1-of-2">
           <ParagraphTitled
             title="You're going to fall in love with nature"
@@ -48,7 +48,7 @@
     </section>
 
     <section class="section-tours">
-      <SectionHeading heading="Most popular tours" />
+      <SectionHeading heading="Most popular tours" customClasses="u-mb-big" />
       <div class="row">
         <div class="col-1-of-3" v-for="tour in tours" :key="`tour-${tour.id}`">
           <Card :tour="tour" />
@@ -65,13 +65,18 @@
         webmSrc="https://agustindeluca.com.ar/projects/adl-tours/videos/beach-background.webm"
       />
 
-      <SectionHeading heading="We make people genuinely happy" />
+      <SectionHeading heading="We make people genuinely happy" customClasses="u-mb-big" />
 
       <div class="row" v-for="story in stories" :key="`story-${story.id}`">
         <Story :story="story" />
       </div>
       <div class="u-text-center u-mt-huge">
         <a href="#" class="btn-text">Read all stories &rarr;</a>
+      </div>
+    </section>
+    <section class="section-book">
+      <div class="row">
+        <BookingBox />
       </div>
     </section>
   </div>
@@ -83,6 +88,7 @@ import { ABOUT_IMAGES, FEATURES, TOURS, STORIES } from "@/_factories";
 import Card from "@/components/Card.vue";
 import Story from "@/components/Story.vue";
 import FeatureBox from "@/components/FeatureBox.vue";
+import BookingBox from "@/components/BookingBox.vue";
 import Composition from "@/components/Composition.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import ParagraphTitled from "@/components/ParagraphTitled.vue";
@@ -95,6 +101,7 @@ export default {
     Card,
     Story,
     FeatureBox,
+    BookingBox,
     Composition,
     SectionHeading,
     ParagraphTitled,

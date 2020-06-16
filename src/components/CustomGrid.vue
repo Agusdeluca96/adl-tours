@@ -36,3 +36,19 @@ export default {
   name: "CustomGrid"
 };
 </script>
+
+<style lang="scss" scoped>
+.custom-grid {
+  .row {
+    height: $grid-row-height;
+
+    [class^="col-"] {
+      background-color: orangered;
+      color: $color-white;
+      height: 100%;
+      line-height: $grid-row-height;
+      text-align: center;
+    }
+  }
+}
+</style>
