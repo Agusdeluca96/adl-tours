@@ -2,7 +2,7 @@
   <div class="home">
     <div class="header">
       <div class="header__logo-container">
-        <img src="@/assets/images/logo.png" alt="Logo" class="header__logo" />
+        <img src="@/assets/images/adl-tours-white.png" alt="Logo" class="header__logo" />
       </div>
       <div class="header__text-container">
         <h1 class="heading-primary">
@@ -61,8 +61,8 @@
 
     <section class="section-stories">
       <BackgroundVideo
-        mp4Src="https://agustindeluca.com.ar/projects/adl-tours/videos/beach-background.mp4"
-        webmSrc="https://agustindeluca.com.ar/projects/adl-tours/videos/beach-background.webm"
+        mp4Src="https://agustindeluca.com.ar/projects/adl-tours/assets/videos/beach-background.mp4"
+        webmSrc="https://agustindeluca.com.ar/projects/adl-tours/assets/videos/beach-background.webm"
       />
 
       <SectionHeading heading="We make people genuinely happy" customClasses="u-mb-big" />
