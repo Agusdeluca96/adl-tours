@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Navigation />
     <div class="header">
       <div class="header__logo-container">
         <img src="@/assets/images/adl-tours-white.png" alt="Logo" class="header__logo" />
@@ -87,6 +88,7 @@ import { ABOUT_IMAGES, FEATURES, TOURS, STORIES } from "@/_factories";
 
 import Card from "@/components/Card.vue";
 import Story from "@/components/Story.vue";
+import Navigation from "@/components/Navigation.vue";
 import FeatureBox from "@/components/FeatureBox.vue";
 import BookingBox from "@/components/BookingBox.vue";
 import Composition from "@/components/Composition.vue";
@@ -100,6 +102,7 @@ export default {
   components: {
     Card,
     Story,
+    Navigation,
     FeatureBox,
     BookingBox,
     Composition,
