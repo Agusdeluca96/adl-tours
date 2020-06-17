@@ -21,7 +21,7 @@
           <p class="card__price-only">Only</p>
           <p class="card__price-value">${{ tour.price }}</p>
         </div>
-        <a href="#" class="btn btn--rounded btn--white">Book now</a>
+        <a href="#booking-popup" class="btn btn--rounded btn--white">Book now</a>
       </div>
     </div>
   </div>

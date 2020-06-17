@@ -11,7 +11,10 @@
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a href="#tours" class="btn btn--white btn--rounded btn--animated">Discover our tours</a>
+        <a
+          href="#section-popular-tours"
+          class="btn btn--white btn--rounded btn--animated"
+        >Discover our tours</a>
       </div>
     </div>
 
@@ -48,7 +51,7 @@
       </div>
     </section>
 
-    <section class="section-tours">
+    <section id="section-popular-tours" class="section-tours">
       <SectionHeading heading="Most popular tours" customClasses="u-mb-big" />
       <div class="row">
         <div class="col-1-of-3" v-for="tour in tours" :key="`tour-${tour.id}`">
@@ -59,6 +62,7 @@
         <a href="#" class="btn btn--rounded btn--green">Discover all tours</a>
       </div>
     </section>
+    <BookingPopup />
 
     <section class="section-stories">
       <BackgroundVideo
@@ -92,6 +96,7 @@ import Navigation from "@/components/Navigation.vue";
 import FeatureBox from "@/components/FeatureBox.vue";
 import BookingBox from "@/components/BookingBox.vue";
 import Composition from "@/components/Composition.vue";
+import BookingPopup from "@/components/BookingPopup.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import ParagraphTitled from "@/components/ParagraphTitled.vue";
 import BackgroundVideo from "@/components/BackgroundVideo.vue";
@@ -106,6 +111,7 @@ export default {
     FeatureBox,
     BookingBox,
     Composition,
+    BookingPopup,
     SectionHeading,
     ParagraphTitled,
     BackgroundVideo
