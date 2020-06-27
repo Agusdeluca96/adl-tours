@@ -5,7 +5,7 @@
       rgba($color-primary, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("~@/assets/images/nat-10.jpg");
+    url('~@/assets/images/nat-10.jpg');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -15,6 +15,16 @@
     position: absolute;
     top: 6rem;
     left: 6rem;
+
+    @include responsive(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__logo {
@@ -24,5 +34,16 @@
   &__text-container {
     @include center-horizontal-vertical;
     text-align: center;
+  }
+
+  @include responsive(tab-port) {
+    height: 100vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
+  @include responsive(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 }

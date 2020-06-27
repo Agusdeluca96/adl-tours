@@ -6,32 +6,62 @@
 // Margin bottom utilities
 .u-mb-small {
   margin-bottom: 1.5rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .u-mb-medium {
   margin-bottom: 4rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-mb-big {
   margin-bottom: 9rem !important;
+  @include responsive(tab-port) {
+    margin-bottom: 6rem !important;
+  }
 }
 
 .u-mb-huge {
   margin-bottom: 12rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 10rem;
+  }
 }
 // Margin top utilities
 .u-mt-small {
   margin-top: 1.5rem !important;
+
+  @include responsive(tab-port) {
+    margin-top: 1rem !important;
+  }
 }
 
 .u-mt-medium {
   margin-top: 4rem !important;
+
+  @include responsive(tab-port) {
+    margin-top: 3rem !important;
+  }
 }
 
 .u-mt-big {
   margin-top: 9rem !important;
+  @include responsive(tab-port) {
+    margin-top: 6rem !important;
+  }
 }
 
 .u-mt-huge {
   margin-top: 12rem !important;
+
+  @include responsive(tab-port) {
+    margin-top: 10rem !important;
+  }
 }

@@ -7,9 +7,26 @@
 }
 
 html {
-  font-size: 70%; // Defines what 1rem looks like
+  font-size: 62.5%; // Defines what 1rem looks like
+
+  @include responsive(big-desk) {
+    font-size: 75%;
+  }
+
+  @include responsive(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem; /* Optional: Gives padding for white border to the entire webpage */
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }

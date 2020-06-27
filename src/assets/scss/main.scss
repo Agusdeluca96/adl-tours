@@ -1,25 +1,26 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "components/card";
-@import "components/form";
-@import "components/story";
-@import "components/button";
-@import "components/navigation";
-@import "components/feature-box";
-@import "components/booking-box";
-@import "components/composition";
-@import "components/booking-popup";
-@import "components/background-video";
+@import 'components/card';
+@import 'components/form';
+@import 'components/story';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/feature-box';
+@import 'components/booking-box';
+@import 'components/composition';
+@import 'components/booking-popup';
+@import 'components/section-heading';
+@import 'components/background-video';
 
-@import "layout/header";
-@import "layout/footer";
-@import "layout/grid";
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
 
-@import "pages/home";
+@import 'pages/home';

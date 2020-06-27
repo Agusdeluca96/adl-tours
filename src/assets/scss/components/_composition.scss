@@ -3,11 +3,11 @@
 
   &__photo {
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: $composition-z-index;
-    transition: all .2s;
+    transition: all 0.2s;
     outline-offset: 2rem;
 
     &--p1 {
@@ -19,21 +19,81 @@
       right: 0;
       top: 2rem;
     }
-    
+
     &--p3 {
       left: 20%;
       top: 10rem;
     }
-    
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+
+      @include responsive(tab-port) {
+        left: 2.5rem;
+        top: 4rem;
+      }
+
+      @include responsive(phone) {
+        left: 2.5rem;
+        top: 2rem;
+      }
+
+      @include responsive(small-phone) {
+        left: 2.5rem;
+        top: 0rem;
+      }
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+
+      @include responsive(tab-port) {
+        top: -5rem;
+        right: 2.5rem;
+      }
+
+      @include responsive(phone) {
+        top: -3rem;
+        right: 2.5rem;
+      }
+
+      @include responsive(small-phone) {
+        top: -6rem;
+        right: 2.5rem;
+      }
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+
+      @include responsive(tab-port) {
+        left: 25%;
+        top: 15rem;
+      }
+
+      @include responsive(phone) {
+        left: 25%;
+        top: 13rem;
+      }
+
+      @include responsive(small-phone) {
+        left: 25%;
+        top: 6rem;
+      }
+    }
+
     &:hover {
       outline: 1.5rem solid $color-primary-light;
       transform: scale(1.1);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: calc(#{$composition-z-index} + 1);
     }
   }
-  
-  &:hover &__photo:not(:hover){
+
+  &:hover &__photo:not(:hover) {
     transform: scale(0.9);
   }
 }
