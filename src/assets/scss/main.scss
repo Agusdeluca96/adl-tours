@@ -7,17 +7,17 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'components/card';
-@import 'components/form';
-@import 'components/story';
 @import 'components/button';
-@import 'components/navigation';
+@import 'components/tour-card';
+@import 'components/story-box';
 @import 'components/feature-box';
 @import 'components/booking-box';
-@import 'components/composition';
+@import 'components/booking-form';
 @import 'components/booking-popup';
+@import 'components/navigation-menu';
 @import 'components/section-heading';
 @import 'components/background-video';
+@import 'components/images-composition';
 
 @import 'layout/header';
 @import 'layout/footer';

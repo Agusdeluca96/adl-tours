@@ -6,8 +6,6 @@
 </template>
 <script>
 export default {
-  name: "ParagraphTitled",
-
   props: {
     title: String,
     titleClass: String,

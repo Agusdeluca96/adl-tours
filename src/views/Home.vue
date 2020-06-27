@@ -23,19 +23,19 @@
     </div>
 
     <section class="section-about">
-      <SectionHeading
+      <section-heading
         heading="Exciting tours for adventurous people"
         customClasses="u-mb-big"
       />
       <div class="row">
         <div class="col-1-of-2">
-          <ParagraphTitled
+          <paragraph-titled
             title="You're going to fall in love with nature"
             paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec consequat est, et auctor dolor. Integer et ex ac libero elementum pharetra. Etiam bibendum augue dui, a eleifend risus venenatis eget."
             paragraphClass="u-mb-medium"
           />
 
-          <ParagraphTitled
+          <paragraph-titled
             title="Live adventures like you never have before"
             paragraph="Nullam et hendrerit odio, et molestie nisl. In eget varius ligula. Duis metus risus, tristique ac auctor vel, faucibus vel orci."
             paragraphClass="u-mb-medium"
@@ -45,7 +45,7 @@
         </div>
 
         <div class="col-1-of-2">
-          <Composition :images="aboutImages" />
+          <images-composition :images="aboutImages" />
         </div>
       </div>
     </section>
@@ -57,37 +57,37 @@
           v-for="feature in features"
           :key="`feature-${feature.id}`"
         >
-          <FeatureBox :feature="feature" />
+          <feature-box :feature="feature" />
         </div>
       </div>
     </section>
 
     <section id="section-popular-tours" class="section-tours">
-      <SectionHeading heading="Most popular tours" customClasses="u-mb-big" />
+      <section-heading heading="Most popular tours" customClasses="u-mb-big" />
       <div class="row">
         <div class="col-1-of-3" v-for="tour in tours" :key="`tour-${tour.id}`">
-          <Card :tour="tour" />
+          <tour-card :tour="tour" />
         </div>
       </div>
       <div class="u-text-center u-mt-huge">
         <a href="#" class="btn btn--rounded btn--green">Discover all tours</a>
       </div>
     </section>
-    <BookingPopup />
+    <booking-popup />
 
     <section class="section-stories">
-      <BackgroundVideo
+      <background-video
         mp4Src="https://adl-tours.agustindeluca.com.ar/assets/videos/beach-background.mp4"
         webmSrc="https://adl-tours.agustindeluca.com.ar/assets/videos/beach-background.webm"
       />
 
-      <SectionHeading
+      <section-heading
         heading="We make people genuinely happy"
         customClasses="u-mb-big"
       />
 
       <div class="row" v-for="story in stories" :key="`story-${story.id}`">
-        <Story :story="story" />
+        <story-box :story="story" />
       </div>
       <div class="u-text-center u-mt-huge">
         <a href="#" class="btn-text">Read all stories &rarr;</a>
@@ -95,7 +95,11 @@
     </section>
     <section class="section-book">
       <div class="row">
-        <BookingBox />
+        <div class="booking-box">
+          <div class="booking-box__form-container">
+            <booking-form />
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -104,29 +108,29 @@
 <script>
 import { ABOUT_IMAGES, FEATURES, TOURS, STORIES } from '@/_factories';
 
-import Card from '@/components/Card.vue';
-import Story from '@/components/Story.vue';
+import TourCard from '@/components/TourCard.vue';
+import StoryBox from '@/components/StoryBox.vue';
 import FeatureBox from '@/components/FeatureBox.vue';
-import BookingBox from '@/components/BookingBox.vue';
-import Composition from '@/components/Composition.vue';
+import BookingForm from '@/components/BookingForm.vue';
 import BookingPopup from '@/components/BookingPopup.vue';
 import SectionHeading from '@/components/SectionHeading.vue';
 import ParagraphTitled from '@/components/ParagraphTitled.vue';
 import BackgroundVideo from '@/components/BackgroundVideo.vue';
+import ImagesComposition from '@/components/ImagesComposition.vue';
 
 export default {
   name: 'home',
 
   components: {
-    Card,
-    Story,
+    TourCard,
+    StoryBox,
     FeatureBox,
-    BookingBox,
-    Composition,
+    BookingForm,
     BookingPopup,
     SectionHeading,
     ParagraphTitled,
-    BackgroundVideo
+    BackgroundVideo,
+    ImagesComposition
   },
 
   data: () => {

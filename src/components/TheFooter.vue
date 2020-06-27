@@ -1,7 +1,11 @@
 <template>
   <footer class="footer">
     <div class="footer__logo-container">
-      <img src="@/assets/images/adl-tours.png" alt="Logo" class="footer__logo" />
+      <img
+        src="@/assets/images/adl-tours.png"
+        alt="Logo"
+        class="footer__logo"
+      />
     </div>
     <div class="row">
       <div class="col-1-of-2">
@@ -32,7 +36,9 @@
             class="footer__link"
             href="https://agustindeluca.com.ar"
             target="_blank"
-          >Agustin M. De Luca</a>
+          >
+            Agustin M. De Luca
+          </a>
         </p>
       </div>
     </div>
@@ -40,7 +46,5 @@
 </template>
 
 <script>
-export default {
-  name: "Footer"
-};
+export default {};
 </script>

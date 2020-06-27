@@ -1,19 +1,19 @@
 <template>
-  <div class="composition">
+  <div class="images-composition">
     <img
       v-for="image in images"
       :key="`image-${image.id}`"
       :src="image.src"
       :alt="image.name"
-      :class="`composition__photo composition__photo--p${image.id}`"
+      :class="
+        `images-composition__photo images-composition__photo--p${image.id}`
+      "
     />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Composition",
-
   props: {
     images: Array
   }

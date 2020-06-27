@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: "CustomGrid"
+  name: 'CustomGrid'
 };
 </script>
 
@@ -42,7 +42,7 @@ export default {
   .row {
     height: $grid-row-height;
 
-    [class^="col-"] {
+    [class^='col-'] {
       background-color: orangered;
       color: $color-white;
       height: 100%;

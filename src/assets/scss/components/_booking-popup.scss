@@ -8,9 +8,9 @@
   z-index: $popup-z-index;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 
-  &:target {
+  &--opened {
     opacity: 1;
     visibility: visible;
   }
@@ -20,16 +20,16 @@
     display: table;
     width: 75%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .15);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.15);
     border-radius: 3px;
     overflow: hidden;
 
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
-    transition: all .5s .2s;
+    transition: all 0.5s 0.2s;
   }
 
-  &:target &__container {
+  &--opened &__container {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -39,12 +39,20 @@
     vertical-align: middle;
     width: 35%;
   }
-  
+
   &__right {
     display: table-cell;
     vertical-align: middle;
     width: 65%;
     padding: 3rem 5rem;
+
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url('~@/assets/images/nat-10.jpg');
+    background-size: cover;
   }
 
   &__close {
@@ -58,7 +66,7 @@
       font-size: 3rem;
       line-height: 1;
       text-decoration: none;
-      transition: all .2s;
+      transition: all 0.2s;
     }
 
     &:hover {
@@ -74,7 +82,7 @@
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
-    
+
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid $color-grey-light-2;

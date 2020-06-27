@@ -6,8 +6,6 @@
 
 <script>
 export default {
-  name: "SectionHeading",
-
   props: {
     heading: String,
     customClasses: String
