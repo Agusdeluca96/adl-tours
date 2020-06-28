@@ -1,17 +1,20 @@
 export const ABOUT_IMAGES = [
   {
     id: 1,
-    name: "Lake in forest",
-    src: "https://adl-tours.agustindeluca.com.ar/assets/images/lake-in-forest.jpg"
+    alt: "Lake in forest",
+    name: "lake-in-forest",
+    extension: ".jpg"
   },
   {
     id: 2,
-    name: "Cyclist in road",
-    src: "https://adl-tours.agustindeluca.com.ar/assets/images/cyclist-in-road.jpg"
+    alt: "Cyclist in road",
+    name: "cyclist-in-road",
+    extension: ".jpg"
   },
   {
     id: 3,
-    name: "Walking top of mountain",
-    src: "https://adl-tours.agustindeluca.com.ar/assets/images/waiking-top-of-mountain.jpg"
+    alt: "Walking top of mountain",
+    name: "waiking-top-of-mountain",
+    extension: ".jpg"
   },
 ];
