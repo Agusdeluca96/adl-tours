@@ -4,7 +4,7 @@
       v-for="image in images"
       :key="`image-${image.id}`"
       :srcSet="imageSrcSet(image)"
-      sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+      sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
       :src="imageSrc(image)"
       :alt="image.alt"
       :class="
