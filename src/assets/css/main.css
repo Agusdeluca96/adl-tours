@@ -918,6 +918,20 @@ body {
   transition: all 0.2s;
 }
 
+.booking-form__submit-button {
+  left: 35%;
+  -webkit-transform: translateX(-35%);
+          transform: translateX(-35%);
+}
+
+@media (max-width: 56.25em) {
+  .booking-form__submit-button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 .booking-form__radio-input:checked ~ .booking-form__radio-label .booking-form__radio-button::after {
   opacity: 1;
 }

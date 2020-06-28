@@ -49,7 +49,9 @@
       </div>
     </div>
     <div class="booking-form__group">
-      <button class="btn btn--green btn--rounded">Next step &rarr;</button>
+      <button class="booking-form__submit-button btn btn--green btn--rounded">
+        Next step &rarr;
+      </button>
     </div>
   </form>
 </template>

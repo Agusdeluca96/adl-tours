@@ -96,6 +96,16 @@
     }
   }
 
+  &__submit-button {
+    left: 35%;
+    transform: translateX(-35%);
+
+    @include responsive(tab-port) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
   }
