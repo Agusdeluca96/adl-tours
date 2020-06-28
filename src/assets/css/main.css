@@ -973,14 +973,28 @@ body {
   width: 35%;
 }
 
+@media (max-width: 75em) {
+  .booking-popup__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
 .booking-popup__right {
   display: table-cell;
   vertical-align: middle;
   width: 65%;
   padding: 3rem 5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url("~@/assets/images/nat-10.jpg");
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("~@/assets/images/nat-10.jpg");
-  background-size: cover;
+  text-align: center;
+}
+
+@media (max-width: 75em) {
+  .booking-popup__right {
+    display: block;
+    width: 100%;
+  }
 }
 
 .booking-popup__close:link, .booking-popup__close:visited {
@@ -1005,9 +1019,17 @@ body {
   width: 100%;
 }
 
+@media (max-width: 75em) {
+  .booking-popup__img {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
 .booking-popup__text {
   font-size: 1.4rem;
   margin-bottom: 4rem;
+  text-align: justify;
   -moz-column-count: 2;
   -moz-column-gap: 4rem;
   -moz-column-rule: 1px solid #eee;

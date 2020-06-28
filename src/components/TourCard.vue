@@ -35,7 +35,7 @@
           <p class="tour-card__price-value">${{ tour.price }}</p>
         </div>
         <a
-          href="#tour-conditions"
+          href="#tour-terms"
           class="btn btn--rounded btn--white"
           @click="$emit('openBookingPopup', tour)"
         >

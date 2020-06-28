@@ -62,18 +62,24 @@
       </div>
     </section>
 
-    <section id="section-popular-tours" class="section-tours">
+    <section id="popular-tours" class="section-tours">
       <section-heading heading="Most popular tours" customClasses="u-mb-big" />
       <div class="row">
         <div class="col-1-of-3" v-for="tour in tours" :key="`tour-${tour.id}`">
-          <tour-card :tour="tour" />
+          <tour-card
+            :tour="tour"
+            @openBookingPopup="tour => openBookingPopup(tour)"
+          />
         </div>
       </div>
       <div class="u-text-center u-mt-huge">
         <a href="#" class="btn btn--rounded btn--green">Discover all tours</a>
       </div>
     </section>
-    <booking-popup />
+    <booking-popup
+      :tour="selectedTour"
+      @closeBookingPopup="closeBookingPopup()"
+    />
 
     <section class="section-stories">
       <background-video
@@ -93,7 +99,7 @@
         <a href="#" class="btn-text">Read all stories &rarr;</a>
       </div>
     </section>
-    <section class="section-book">
+    <section id="booking" class="section-book">
       <div class="row">
         <div class="booking-box">
           <div class="booking-box__form-container">
@@ -138,8 +144,19 @@ export default {
       aboutImages: ABOUT_IMAGES,
       features: FEATURES,
       tours: TOURS,
-      stories: STORIES
+      stories: STORIES,
+      selectedTour: {}
     };
+  },
+
+  methods: {
+    openBookingPopup(tour) {
+      this.selectedTour = tour;
+    },
+
+    closeBookingPopup() {
+      this.selectedTour = {};
+    }
   }
 };
 </script>
