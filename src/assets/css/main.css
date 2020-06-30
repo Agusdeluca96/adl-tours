@@ -1020,6 +1020,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 30em) {
+  .booking-popup__left {
+    display: none;
+  }
+}
+
 .booking-popup__right {
   display: table-cell;
   vertical-align: middle;
@@ -1080,6 +1086,13 @@ body {
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+@media only screen and (max-width: 30em) {
+  .booking-popup__text {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
 }
 
 .navigation-menu__checkbox {

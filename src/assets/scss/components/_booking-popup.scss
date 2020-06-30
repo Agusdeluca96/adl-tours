@@ -54,6 +54,10 @@
       display: flex;
       width: 100%;
     }
+
+    @include responsive(small-phone) {
+      display: none;
+    }
   }
 
   &__right {
@@ -114,5 +118,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include responsive(small-phone) {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
   }
 }
