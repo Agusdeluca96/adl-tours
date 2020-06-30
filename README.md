@@ -1,4 +1,4 @@
-# adl-nature-tours
+# adl-tours
 
 ## Project setup
 ```
